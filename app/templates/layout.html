@@ -1,0 +1,17 @@
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Ardit's web app</h1>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('resume') }}">Resume</a></li>
+            <li><a href="{{ url_for('moods') }}">Moods</a></li>
+          </ul>
+      </div>
+    </header>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
