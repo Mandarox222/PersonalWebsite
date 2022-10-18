@@ -38,8 +38,8 @@ def projects():
     return render_template('all_projects.html')
 
 def searchSong(artist, title):
-    clientID = 'd2ccc643900f46b4be5309cf086db36d'
-    clientSecret = '38a0accbac3a4d6b928c07757feb106e'
+    clientID = #######
+    clientSecret = #######
     ccm = SpotifyClientCredentials(client_id=clientID, client_secret=clientSecret)
     sp = spotipy.Spotify(client_credentials_manager=ccm)
     query = f"artist:%{artist} track:%{title}"
@@ -49,8 +49,8 @@ def searchSong(artist, title):
 def predictMood(uri):
     model = load('improved_model.joblib')
     scaler = load('improved_scaler.joblib')
-    clientID = 'd2ccc643900f46b4be5309cf086db36d'
-    clientSecret = '38a0accbac3a4d6b928c07757feb106e'
+    clientID = ######
+    clientSecret = #####
     ccm = SpotifyClientCredentials(client_id=clientID, client_secret=clientSecret)
     sp = spotipy.Spotify(client_credentials_manager=ccm)
     song_features = sp.audio_features(uri)[0]
